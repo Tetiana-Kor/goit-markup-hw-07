@@ -1,0 +1,90 @@
+.team {
+  background-color: $secondary-bg-color;
+
+  & .text {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+}
+
+.container-item {
+  @extend %list;
+  display: flex;
+  padding-bottom: 94px;
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 94px;
+  text-align: center;
+}
+
+.team-list {
+  width: 270px;
+  text-align: center;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding-bottom: 24px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.team-subtitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  & .text {
+    font-weight: 400;
+  }
+}
+
+.team-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.lines {
+  display: flex;
+
+  &:hover a,
+  &:focus a {
+    background-color: $accent-color;
+  }
+
+  .team-item &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.team-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  .team-link & {
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+  }
+  .lines:hover &,
+  .lines:focus & {
+    fill: $primary-white-color;
+  }
+}
